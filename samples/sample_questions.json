@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "course_id": 1,
+    "domain": "Computer Systems & Architecture",
+    "question_text": "Which of the following architectural principles states that a system should be designed with the minimum set of privileges required for an entity to perform its authorized function?",
+    "option_a": "Separation of Duties",
+    "option_b": "Principle of Least Privilege",
+    "option_c": "Defense in Depth",
+    "option_d": "Fail-Safe Defaults",
+    "correct_answer": "B",
+    "explanation": "The Principle of Least Privilege dictates that any user, program, or process must possess only the bare minimum access rights and permissions necessary to fulfill its assigned task.\n\n• Option A (Separation of Duties) divides critical tasks among multiple entities to prevent unilateral fraud or error.\n• Option B is correct because it explicitly limits privilege levels to the minimum required threshold.\n• Option C (Defense in Depth) implements layered redundant controls to protect assets.\n• Option D (Fail-Safe Defaults) ensures that access decisions default to denying permission in the event of failure."
+  },
+  {
+    "id": 2,
+    "course_id": 1,
+    "domain": "Distributed Systems & Networking",
+    "question_text": "In distributed database systems, what does the CAP theorem state regarding the simultaneous guarantees a distributed data store can provide?",
+    "option_a": "It can guarantee Consistency, Availability, and Partition Tolerance simultaneously.",
+    "option_b": "It can guarantee at most two of Consistency, Availability, and Partition Tolerance in the presence of network partitions.",
+    "option_c": "It guarantees that Performance and Durability are always strictly inversely proportional.",
+    "option_d": "It asserts that eventual consistency requires synchronous replication across all nodes.",
+    "correct_answer": "B",
+    "explanation": "Brewer's CAP theorem establishes that in the event of a network partition (P), a distributed system must choose between either Consistency (C) — where every read receives the most recent write — or Availability (A) — where every non-failing node returns a non-error response.\n\n• Option A is incorrect because simultaneous satisfaction of all three properties during a partition is mathematically impossible.\n• Option B is correct as it accurately captures the fundamental trade-off required under partition conditions.\n• Option C is incorrect as it describes general performance latency rather than the CAP theorem.\n• Option D is incorrect because eventual consistency relies on asynchronous rather than synchronous propagation."
+  },
+  {
+    "id": 3,
+    "course_id": 1,
+    "domain": "Algorithms & Data Structures",
+    "question_text": "What is the worst-case time complexity of standard Quicksort when an unbalanced pivot selection strategy is utilized on an already sorted dataset?",
+    "option_a": "O(log n)",
+    "option_b": "O(n log n)",
+    "option_c": "O(n^2)",
+    "option_d": "O(n)",
+    "correct_answer": "C",
+    "explanation": "When Quicksort repeatedly selects an extreme element (such as always choosing the first or last element) on an already ordered array, the recursive partition degrades into subproblems of size n-1, resulting in O(n^2) quadratic time complexity.\n\n• Option A is incorrect because O(log n) describes the recursive stack depth under balanced partitions.\n• Option B is incorrect because O(n log n) represents the average and best-case performance with balanced pivots.\n• Option C is correct as unbalanced partition trees lead to n levels of recursion processing linear work.\n• Option D is incorrect because comparison-based sorting algorithms cannot execute in O(n) worst-case time."
+  }
+]

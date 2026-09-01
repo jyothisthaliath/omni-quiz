@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OmniQuizQuestionSchema",
+  "description": "Standard data schema for question bank ingestion into the Omni-Quiz Engine",
+  "type": "object",
+  "required": [
+    "id",
+    "domain",
+    "question_text",
+    "option_a",
+    "option_b",
+    "option_c",
+    "option_d",
+    "correct_answer",
+    "explanation"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique integer identifier for the question"
+    },
+    "course_id": {
+      "type": "integer",
+      "description": "Identifier for parent course / subject track",
+      "default": 1
+    },
+    "domain": {
+      "type": "string",
+      "description": "Knowledge domain or competency category"
+    },
+    "question_text": {
+      "type": "string",
+      "minLength": 15,
+      "description": "The complete multiple-choice question stem"
+    },
+    "option_a": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text content for Option A"
+    },
+    "option_b": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text content for Option B"
+    },
+    "option_c": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text content for Option C"
+    },
+    "option_d": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text content for Option D"
+    },
+    "correct_answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D"],
+      "description": "The verified correct answer choice"
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Thorough distractor breakdown explaining the correct choice and analyzing why alternative options are incorrect"
+    }
+  }
+}
