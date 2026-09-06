@@ -234,14 +234,14 @@ Omni-Quiz incorporates specialized offline automation scripts to ensure that all
 ### 1. Automated Question Bank Quality Auditing
 A comprehensive database quality assurance process that scans and automatically cleans question records:
 * **Structural & Schema Integrity**: Ensures question stems meet minimum length requirements ($\ge 15$ characters), all 4 answer options (A, B, C, D) are populated and correct answer keys are valid.
-* **Automated OCR Ligature & Typo Repair**: Fixes scanning errors from digitized source books (e.g. `difÏcult` $\to$ `difficult`, `ofÏce` $\to$ `office`, `secirity` $\to$ `security`, `govemance` $\to$ `governance`).
-* **Typography Standardization**: Cleans non-standard control characters (`\xa0`, `\u200b`), fixes smart quotes and standardizes punctuation spacing (e.g. `risk.The` $\to$ `risk. The`).
-* **Cybersecurity & IT Terminology Whitelist**: Audits words against a comprehensive technical dictionary covering certifications, standards and metrics (ISACA, ISC2, NIST, COBIT, CIA triad, SIEM, SOC, RTO/RPO, BIA, etc.) to flag genuine spelling issues.
+* **Automated OCR Ligature & Typo Repair**: Fixes scanning errors from digitized source books (e.g. `difÏcult` $\to$ `difficult`, `ofÏce` $\to$ `office`, `configration` $\to$ `configuration`).
+* **Typography Standardization**: Cleans non-standard control characters (`\xa0`, `\u200b`), fixes smart quotes and standardizes punctuation spacing (e.g. `system.The` $\to$ `system. The`).
+* **IT & Technical Terminology Whitelist**: Audits words against a technical dictionary covering industry standards, protocols, architectures and acronyms to catch typos while preserving valid technical terms.
 * **Distractor Length Calibration**: Analyzes answer choice lengths to identify questions where the correct answer is noticeably longer or shorter than the distractors, preventing giveaway answers.
 
 ### 2. Textbook Reference Search & Citation Indexing
 To ensure explanations are grounded in authoritative source literature, the platform uses a book indexing and citation pipeline:
-* **Textbook Full-Text Indexing**: Uses PyMuPDF to extract and index page-by-page text from official study guides (e.g., Mike Chapple *CC Study Guide*, Steven Bennett *CC All-in-One Exam Guide* and official ISACA review manuals).
+* **Textbook Full-Text Indexing**: Uses PyMuPDF to extract and index page-by-page text from official certification study guides and course textbooks.
 * **Automated Keyword & Concept Matching**: Analyzes the question stem and correct answer choice to search the textbook index for the exact relevant section.
 * **Substantive Quote Extraction**: Automatically pulls the defining paragraph and chapter reference from the textbook and embeds the exact quote and page number into the question's explanation field.
 
@@ -249,7 +249,7 @@ To ensure explanations are grounded in authoritative source literature, the plat
 Every question explanation follows a clean 3-part educational structure:
 1. **Core Concept & Scenario Rationale**: Explains directly why the correct answer solves the problem presented in the question stem.
 2. **Official Exam Guide Citation**: Cites the textbook title, chapter topic, page number and direct textbook quote.
-3. **Granular Distractor Analysis**: Explicitly details why each incorrect option (A, B, C or D) is wrong, explaining whether it applies to a different layer, an unrelated security concept or a different administrative role.
+3. **Granular Distractor Analysis**: Explicitly details why each incorrect option (A, B, C or D) is wrong, explaining whether it applies to a different technical layer, an unrelated protocol or a different functional requirement.
 
 ---
 
