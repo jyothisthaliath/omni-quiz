@@ -190,12 +190,12 @@ Omni-Quiz includes a complete suite of administrative tools for managing curricu
 flowchart TB
     subgraph App["Live Web Application"]
         direction LR
-        Client["Browser / Mobile PWA\n(Alpine.js + SSR)"] --> Proxy["Caddy Proxy\n(HTTPS / Static Assets)"] --> Server["FastAPI Backend\n(Quiz Engine & Admin APIs)"] --> DB[("SQLite Database\n(WAL Mode)")]
+        Client["Browser / Mobile PWA<br/>(Alpine.js + SSR)"] --> Proxy["Caddy Proxy<br/>(HTTPS / Static Assets)"] --> Server["FastAPI Backend<br/>(Quiz Engine & Admin APIs)"] --> DB[("SQLite Database<br/>(WAL Mode)")]
     end
 
     subgraph Tools["Offline Question & Audit Tools"]
         direction LR
-        Sources["Study Guides & PDFs\n(Reference Literature)"] --> Indexer["Book Indexer\n(PyMuPDF Quote Search)"] --> Auditor["Omni Audit Suite\n(QA & Typo Auto-Fix)"] --> DB
+        Sources["Study Guides & PDFs<br/>(Reference Literature)"] --> Indexer["Book Indexer<br/>(PyMuPDF Quote Search)"] --> Auditor["Omni Audit Suite<br/>(QA & Typo Auto-Fix)"] --> DB
     end
 ```
 
