@@ -2,50 +2,42 @@
 
 <div align="center">
 
-![Test Engine](https://img.shields.io/badge/Engine-1%3A1%20CBT%20Simulation-4f46e5?style=for-the-badge)
+![Test Engine](https://img.shields.io/badge/Engine-Exam%20Simulation-4f46e5?style=for-the-badge)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-**An enterprise-grade examination simulation and active mastery framework engineered for high-stakes professional testing.**
+**A lightweight, realistic exam simulation platform built for professional certification practice.**
 
-[Overview](#-product-overview) • [Mission & Vision](#-mission--vision) • [Interface Showcase](#-platform-interface-showcase) • [Core Capabilities](#-core-capabilities) • [Architecture & Workflows](#-system-architecture--workflows) • [Technology Stack](#-technology-stack--architecture) • [Templates & Samples](#-templates--sample-datasets)
+[Overview](#-product-overview) • [Interface Showcase](#-platform-interface-showcase) • [Candidate Features](#-core-candidate-features) • [Admin & Management Tools](#-admin--management-tools) • [System Architecture & Tech Stack](#-system-architecture--technology-stack) • [Question Auditing & Book References](#-question-auditing-book-references--explanation-pipeline) • [Data Contract & Samples](#-data-contract--sample-datasets) • [Mission & Vision](#-mission--vision)
 
 </div>
 
 ---
 
-## 🎯 Mission & Vision
-
-> **The Mission**: To replace restrictive, high-cost testing platforms with a robust, open-architecture examination framework. This empowers candidates to train on rigorous, validated simulation materials without artificial barriers.
-> 
-> **The Vision**: To bridge the gap between static study workflows and real test-day execution by combining 1:1 Computer-Based Testing (CBT) simulation, deep distractor analysis, and adaptive spaced repetition into a unified, high-mastery framework.
-
----
-
 ## 🧭 Product Overview
 
-**Omni-Quiz Engine** is an advanced examination simulation framework designed to optimize candidate readiness, pacing, and conceptual retention for high-stakes professional certifications.
+**Omni-Quiz Engine** is an exam simulation and study platform designed to prepare candidates for computer-based tests, especially IT certification exams.
 
-Traditional study workflows rely heavily on static flashcards and basic review notes, which are excellent for active recall but often fail to replicate the psychological pressure, strict timing, and multi-domain navigation demands of real testing environments. Omni-Quiz Engine bridges this gap by pairing proven study methods with authentic Computer-Based Testing (CBT) interfaces, rigorous distractor analysis, and real-time pacing diagnostics.
+Traditional study methods like static flashcards and notes are great for quick review, but they don't prepare you for the time limits, navigation and pressure of a real testing environment. Omni-Quiz bridges this gap by combining authentic exam screens, detailed answer breakdowns and speed tracking in one place.
 
 ```mermaid
 flowchart LR
-    A[Plug-and-Play Curriculum Ingestion] --> B[Ground-Truth Quality Gate]
-    B --> C[1:1 CBT Exam Simulator]
-    C --> D[Deep Dive Spaced Repetition Queue]
-    D --> E[Visual Infographics & Domain Analytics]
+    A[Curriculum Ingestion] --> B[Automated Quality Audit]
+    B --> C[Realistic Exam Simulator]
+    C --> D[Targeted Deep Dive Queue]
+    D --> E[Domain Analytics & Milestones]
 ```
 
 ---
 
 ## 📸 Platform Interface Showcase
 
-### 1. 1:1 CBT Simulation (Desktop)
-*Exam simulation with question navigation, timer, flag-for-review, and instant answer rationales.*
+### 1. Realistic Exam Screen (Desktop)
+*Exam simulation with question navigation, timer, flag-for-review and instant answer rationales.*
 
 <div align="center">
-  <img src="./assets/03_cbt_quiz_desktop.png" alt="1:1 CBT Exam Simulation Desktop Interface" width="100%" />
+  <img src="./assets/03_cbt_quiz_desktop.png" alt="Realistic Exam Screen Desktop Interface" width="100%" />
 </div>
 
 ---
@@ -71,7 +63,7 @@ flowchart LR
 ---
 
 ### 3. Multi-Course Catalog & Milestones
-*Course selection, progress tracking, and achievement milestones.*
+*Course selection, progress tracking and achievement milestones.*
 
 <div align="center">
   <img src="./assets/01_course_catalog.png" alt="Multi-Course Catalog and Milestones Hub" width="100%" />
@@ -80,7 +72,7 @@ flowchart LR
 ---
 
 ### 4. Performance Dashboard & Analytics
-*Domain-by-domain accuracy breakdowns, readiness scores, and attempt history.*
+*Domain-by-domain accuracy breakdowns, readiness scores and attempt history.*
 
 <div align="center">
   <img src="./assets/02_course_dashboard_metrics.png" alt="Course Hub and Domain Diagnostics Dashboard" width="100%" />
@@ -98,7 +90,7 @@ flowchart LR
 ---
 
 ### 6. Quiz Summary & Pacing Metrics
-*End-of-quiz score summary, domain performance breakdown, and time spent per question.*
+*End-of-quiz score summary, domain performance breakdown and time spent per question.*
 
 <div align="center">
   <img src="./assets/04_quiz_summary_pacing.png" alt="Quiz Performance Summary and Pacing Telemetry" width="100%" />
@@ -106,137 +98,196 @@ flowchart LR
 
 ---
 
-## 💎 Core Capabilities
+## 💎 Core Candidate Features
 
-### 1. Dual Simulation Modes (Practice vs. Exam)
-* **Formative Practice Mode**: Instant, per-question feedback with locked options and immediate distractor rationale reveals for rapid conceptual reinforcement.
-* **Summative CBT Exam Mode**: Full proctored exam simulation with deferred grading, unrevealed answers, question navigation grids, and a comprehensive diagnostic debriefing.
+### 1. Practice & Mock Exam Modes
+* **Practice Mode**: Get immediate feedback after answering each question, with full explanations showing why the right answer is correct and why each wrong choice is incorrect.
+* **Mock Exam Mode**: Simulates the real test experience with timed countdowns, unrevealed answers until submission, full question review grids and an end-of-test performance breakdown.
 
-### 2. High-Fidelity 1:1 CBT Simulation
-* **Psychometric Exam Calibration**: Replicates the exact timing constraints, section pacing, and navigation paradigms used in standardized testing centers.
-* **Flag-for-Review Triaging**: Real-time split-panel question matrix allowing candidates to tag ambiguous items, monitor completion status, and execute targeted end-of-section reviews under time pressure.
-* **High-Efficiency Keyboard Navigation**: Full keyboard shortcut integration (`A`, `B`, `C`, `D` for rapid option selection, `F` for flagging items, `Enter` / `Space` to advance) for high-speed drill sessions and accessibility (a11y).
-* **Cognitive Load Optimization**: High-contrast, distraction-free interface calibrated for extended multi-hour examination marathons without visual fatigue.
+### 2. Realistic Exam Screen & Controls
+* **Realistic Countdown Timer**: Matches the pacing and time constraints of official exams.
+* **Flag for Review**: Easily flag tricky questions, see an overview of answered vs. unanswered items and jump straight to flagged questions before submitting.
+* **Full Keyboard Shortcuts**: Rapid option selection (`A`, `B`, `C`, `D`), flagging (`F`) and advancing (`Enter` / `Space`) for fast keyboard-only study sessions.
+* **Clean, Focused Design**: High-contrast, distraction-free screen calibrated for extended multi-hour study sessions without eye strain.
 
-### 3. Database-Backed Resumable Quiz Sessions
-* **Persistent Exam Runtime**: Active quiz state is stored server-side in a dedicated `QuizSessions` table keyed by UUID, recording the randomized question sequence and accumulative answer map.
-* **Interruption Recovery**: Multi-hour mock exams can be paused, exited, and resumed seamlessly across network drops, tab closures, and device transitions without losing timer state or answers.
+### 3. Resumable Quiz Sessions
+* **Persistent Session State**: Active quiz progress is saved automatically to the database, recording your question order, elapsed time and answers.
+* **Interruption Recovery**: Multi-hour mock exams can be paused, closed and resumed across browser refreshes, tab closures or device switches without losing progress.
 
-### 4. Question Pacing & Accuracy Metrics Telemetry
-* **Millisecond-Level Dwell Time**: Tracks per-question response velocity and dwell time to diagnose speed bottlenecks and time-management risks.
-* **Sub-Domain Precision**: Real-time accuracy and velocity metrics computed across individual knowledge domains and competency areas.
-* **Readiness Probability Index**: Weighted predictive scoring models evaluating attempt recency, domain distribution, and difficulty weighting to calculate true exam readiness.
+### 4. Pacing & Accuracy Metrics
+* **Time Spent Per Question**: Tracks exactly how many seconds you spend on each question to highlight where you get stuck.
+* **Domain Breakdown**: Calculates your accuracy across individual exam topics and domains in real time.
+* **Readiness Score**: Estimates your exam readiness based on recent attempts, question difficulty and domain coverage.
 
 ### 5. Targeted Weak-Spot Training & Spaced Repetition
-* **Automated Error Quarantine**: Incorrect answers are automatically routed into an isolated "Deep Dive" remediation queue.
-* **Active Spaced Repetition (SRS)**: Flagged and missed concepts resurface across calculated intervals until the candidate demonstrates repeated, unassisted mastery.
-* **Focused Remediation Drills**: Candidates can generate targeted review sessions centered strictly on conceptual weak areas to accelerate competency growth.
+* **Automatic Error Quarantine**: Incorrect answers are automatically saved to your "Deep Dive" review list.
+* **Smart Spaced Repetition**: Missed questions reappear across spaced study intervals until you answer them correctly multiple times.
+* **Custom Practice Sets**: Generate quick drills focused exclusively on your weakest topics.
 
-### 6. Milestone Gamification & Achievement Framework
-* **Tiered Mastery Milestones**: Dynamic achievement engine (e.g., *Sharpshooter*, *Clean Sweep*, *Marathoner*, *Explorer*) incentivizing study consistency and milestone progression.
-* **Interactive Touch Carousel**: Responsive achievement carousel with native CSS touch scroll-snapping, SVG status indicators, celebratory confetti particles, and high-contrast toast notifications.
+### 6. Achievement Badges & Milestones
+* **Mastery Milestones**: Earn badges (e.g., *Sharpshooter*, *Clean Sweep*, *Marathoner*, *Explorer*) as you complete quizzes and improve accuracy.
+* **Interactive Trophy Carousel**: Smooth swipeable badge showcase with celebration animations and progress indicators.
 
-### 7. Plug-and-Play Multi-Course Architecture
-* **Extensible Course Ingestion**: Any new subject track, professional certification, or domain question bank can be plugged into the platform instantly without database schema migrations.
-* **Modular Question Taxonomy**: Supports multi-domain hierarchies, weighted competency areas, and configurable exam simulation presets.
-* **Ground-Truth Quality Gates**: Structured auditing pipeline normalizes formatting, cleans question stems, and validates distractor balance across all ingested courses.
+### 7. Multi-Course Support
+* **Add New Courses Instantly**: Any new exam, subject or question bank can be loaded into the platform without database code changes.
+* **Topic Taxonomy**: Group questions by official domains and subtopics for custom practice sessions.
 
-### 8. Structured Distractor Analysis
-* **Comprehensive 4-Option Breakdowns**: Every question delivers thorough pedagogical rationales detailing why the correct choice is accurate and breaking down the specific conceptual fallacy behind each distractor choice.
-* **Citation-Backed Verification**: Links rationales directly to authoritative body-of-knowledge standards and domain literature references.
+### 8. Clear 4-Option Explanations
+* **Explanations for Every Choice**: Every question explains not only why the correct answer is right, but also why each wrong option doesn't fit the scenario.
+* **Direct Textbook Citations**: Explanations link directly to official study guides with exact chapter and page references.
 
-### 9. Mobile-First Optimization & PWA App
-* **Progressive Web App (PWA)**: Installable standalone application experience on mobile and tablet devices with client UI asset caching and responsive home-screen launch.
-* **Touch-Optimized Interaction**: Native mobile touch scroll-snapping, responsive bottom-sheet review drawers, and tactile answer feedback.
-* **Adaptive Ambient Lighting**: Seamless, high-contrast dark and light surface adaptation for comfortable study in any lighting condition.
+### 9. Mobile & PWA Support
+* **Installable App (PWA)**: Install Omni-Quiz as a standalone app on your phone or tablet with home-screen launch and fast offline asset caching.
+* **Touch-Friendly Controls**: Responsive bottom-sheet question drawers and tap-friendly buttons.
+* **Dark & Light Themes**: Easy one-click theme switching for comfortable reading day or night.
 
-### 10. Stateless Cryptographic Authentication & Tenant Isolation
-* **Stateless Signed Cookie Auth**: Request authentication relies on tamper-proof, cryptographically signed HTTP-only cookies (`itsdangerous` / token claims + `bcrypt`), eliminating database lookup overhead on general HTTP requests.
-* **Strict Tenant Segregation**: Complete per-candidate data segregation tracking comprehensive attempt histories, speed metrics, and topic mastery.
+### 10. Simple, Secure Authentication
+* **Tamper-Proof Session Cookies**: Fast, secure login using cryptographically signed cookies (`itsdangerous` + `bcrypt`).
+* **Isolated User Data**: Each candidate has private access to their own attempt histories, speed metrics and review lists.
 
-### 11. Enterprise Announcement & Broadcast Queue
-* **Cross-Device Read Tracking**: Relational database-backed broadcast announcements with multi-device synchronization, ensuring zero missed updates.
-* **Priority Alert Delivery**: Supports priority sticky alerts, timed auto-dismiss progress bars, and single-toast-per-page load orchestration.
+### 11. Broadcast Announcement Banners
+* **Banner Alerts**: Admins can broadcast sticky updates or study tips directly to the candidate portal.
+* **Cross-Device Dismissal**: When you dismiss a banner on your phone, it stays dismissed on your desktop.
 
-### 12. Security-by-Design & Anti-Extraction Architecture
-* **Zero Mass Data Extraction**: Dynamic question streaming and server-validated answer keys prevent client-side bulk data dumps, DOM scraping, or automated curriculum harvesting.
-* **Zero-Trust Access & Rate Limiting**: Hardened session validation and rate-limiting boundaries ensure that examination materials are served strictly within authorized, active simulation flows.
-* **Local Data Residency & Sovereignty**: Local-first architecture engineered with zero third-party tracking pixels, external telemetry probes, or surveillance SDKs, guaranteeing complete institutional and candidate privacy.
+### 12. Safe Data Protection
+* **Anti-Scraping Protection**: Questions and answer keys are served dynamically per question, preventing automated client-side data dumps.
+* **Private & Self-Contained**: 100% self-hosted with zero third-party tracking scripts, analytics cookies or external surveillance probes.
 
 ---
 
-## 🏗️ System Architecture & Workflows
+## 🛠️ Admin & Management Tools
 
-### Candidate Simulation & Remediation Lifecycle
+Omni-Quiz includes a complete suite of administrative and operational tools for managing curriculum, users and deployments without manual database hacking:
+
+### 1. Interactive Question Bank Studio (`/admin/questions`)
+* **Multi-Course & Domain Filters**: Instantly filter questions by course track and knowledge domain.
+* **Single-Record Live Editor**: Rapid next/previous navigation through questions with live in-browser editing of question stems, choices (A, B, C, D), correct answer keys and full explanations.
+* **Live Markdown Preview**: Real-time rendering of formatted option breakdowns, lists and citations as you type.
+* **Bulk CSV & JSON Import/Export**: One-click export of filtered or full question banks to standard CSV/JSON and upload ingestion with validation checks.
+
+### 2. Safe Dev-to-Prod Synchronization
+* **Isolated Staging Workflow**: All question edits and structural fixes are made safely in the Development environment (`APP_ENV=development`).
+* **One-Click Production Sync**: The admin studio includes a guarded `/sync-prod` pipeline that automatically:
+  1. Creates a timestamped SQLite WAL backup before any changes are written.
+  2. Runs a dry-run schema validation check.
+  3. Copies audited question records cleanly into the production database.
+  4. Triggers a zero-downtime service reload without interrupting active candidate exam sessions.
+
+### 3. Dynamic Invite Code & Access Manager (`/admin/invites`)
+* **Custom Code Generation**: Generate clean alphanumeric invite codes with custom usage limits (single-use or multi-user).
+* **Expiration Timers**: Set time-based validity windows (e.g., 7-day or 30-day access passes).
+* **Instant Activation Control**: Toggle codes active/inactive on the fly to grant or revoke access instantly.
+* **Redemption Audit Trail**: View real-time redemption logs showing which candidates used which invite code and when.
+
+### 4. Broadcast Announcements & Alert Dispatcher
+* **Global & Course Banners**: Publish sticky announcements or dismissible alerts directly to candidate portals.
+* **Read State Sync**: User dismissals are synced across devices via database tracking so candidates never see duplicate alerts.
+
+### 5. DevOps Automation & Health Diagnostics
+* **Automated WAL Backups (`backup.py`)**: Scheduled SQLite backups with WAL checkpoints and retention rotation.
+* **Point-in-Time Restore (`restore.py`)**: Automated verification and rollback to previous database snapshots.
+* **System Health Inspector (`verify_services.py`)**: Quick health probes checking Caddy reverse proxy, Dev server and Prod server status.
+
+---
+
+## 🏗️ System Architecture & Technology Stack
+
+### Component Architecture
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    actor Candidate as Exam Candidate
-    participant Portal as Candidate Portal
-    participant CBT as CBT Simulation Engine (Practice & Exam Modes)
-    participant SRS as Deep Dive & Spaced Repetition Queue
-    participant Analytics as Domain Analytics & Infographics Engine
-
-    Candidate->>Portal: Authenticate & Select Plugged Course Track
-    Portal->>CBT: Initialize Resumable Exam Session (UUID State in DB)
-    CBT-->>Candidate: Render 1:1 CBT Interface (Timer, Question Stem, Options, Flag Grid, Keyboard Shortcuts)
-    
-    loop Active Exam Session
-        Candidate->>CBT: Select Option (A, B, C, D) or Toggle Flag (F)
-        CBT->>CBT: Update Session Matrix & Telemetry Pacing Timer in DB
+graph TD
+    subgraph Client["1. Client Layer"]
+        Browser["Desktop Exam Browser\n(Jinja2 SSR + Alpine.js)"]
+        MobilePWA["Mobile PWA\n(Touch UI + Service Worker)"]
     end
-    
-    Candidate->>CBT: Submit Completed Exam
-    CBT->>Analytics: Process Score, Domain Velocity & Pacing Dwell-Times
-    CBT->>SRS: Quarantine Incorrect Answers into Deep Dive Bank
-    Analytics-->>Candidate: Render Visual Infographics & Milestone Unlock Achievements
-    SRS-->>Candidate: Serve Targeted Spaced Repetition Remediation Drills
+
+    subgraph EdgeServer["2. Web Gateway & Auth"]
+        Proxy["Caddy Reverse Proxy\n(HTTPS, Compression & Static Caching)"]
+        ASGI["Uvicorn ASGI Server\n(Python 3.12 Asynchronous Runtime)"]
+        Auth["Signed Cookie Auth\n(itsdangerous + bcrypt Hashing)"]
+    end
+
+    subgraph AppCore["3. FastAPI Core Services"]
+        QuizEngine["Exam Simulation Engine\n(Practice & Mock Modes, Timers)"]
+        SRSEngine["Deep Dive Queue\n(Spaced Repetition & Weak-Spot Remediation)"]
+        Telemetry["Pacing & Analytics Engine\n(Dwell-Time & Domain Readiness)"]
+        AdminStudio["Admin Studio APIs\n(Question Editor, CSV/JSON Sync, Invites)"]
+        Announce["Announcement Dispatcher\n(Sticky Alerts & Cross-Device Read Sync)"]
+    end
+
+    subgraph DataLayer["4. Persistence & Storage"]
+        DB[("SQLite 3 Database\n(WAL Mode, High-Concurrency ACID)")]
+        Sessions[("QuizSessions Table\n(UUID Resumable Exam State)")]
+        Backups[("Automated Backups\n(Timestamped WAL Checkpoints)")]
+    end
+
+    subgraph Tooling["5. Auditing & Reference Tools"]
+        AuditSuite["Omni Audit Suite\n(OCR / Typo / Length Balance QA)"]
+        BookIndexer["PyMuPDF Book Search\n(Textbook Page & Quote Indexer)"]
+        ETLExplanation["Explanation Generator\n(4-Option Rationale Synthesizer)"]
+    end
+
+    Browser --> Proxy
+    MobilePWA --> Proxy
+    Proxy --> ASGI
+    ASGI --> Auth
+    Auth --> AppCore
+    QuizEngine --> DB
+    SRSEngine --> DB
+    Telemetry --> DB
+    AdminStudio --> DB
+    Announce --> DB
+    DB --- Sessions
+    DB --> Backups
+    Tooling -.->|Audits, Enriches & Syncs| DB
 ```
 
 ---
 
-### Question Ingestion & Quality Gate
+### Technology Stack & Specifications
 
-```mermaid
-flowchart TD
-    subgraph Ingestion["1. Multi-Source Ingestion"]
-        A1[Curriculum Question Store] --> P1[Ingestion Normalizer]
-        A2[JSON / CSV Datasets] --> P1
-        A3[Domain Taxonomy Maps] --> P1
-    end
+Omni-Quiz is built with a lightweight, high-performance tech stack designed for sub-millisecond response times, zero build-step overhead and simple maintenance:
 
-    subgraph Validation["2. Quality Assurance Gate"]
-        P1 --> V1[Structural Integrity Verification]
-        V1 -->|Validate Stems, Keys & Options| V2[Lexical & Typographical Audit]
-        V2 -->|Normalize Spacing & Formatting| V3[Distractor Rationale Synthesizer]
-        V3 -->|Generate Why-Right / Why-Wrong Explanations| V4[Citation Verification]
-    end
-
-    subgraph Store["3. Validated Question Pool"]
-        V4 --> DB[(Standard Ingestion Schema)]
-        DB --> CBT_Engine[1:1 CBT Simulation Runtime]
-    end
-```
-
----
-
-## 🛠️ Technology Stack & Architecture
-
-Omni-Quiz Engine is architected with a lightweight, high-performance tech stack engineered for sub-millisecond response times, zero build-step overhead, and maximum runtime reliability:
-
-| Layer | Technology | Architectural Role & Implementation |
+| Layer | Technology | Role & Key Features |
 | :--- | :--- | :--- |
-| **Backend Framework** | **FastAPI** (Python 3.12) | High-performance asynchronous REST API handling examination state, routing, and scoring logic. |
-| **ASGI Web Server** | **Uvicorn** | Lightning-fast asynchronous server gateway interface supporting concurrent client connections. |
-| **Schema Validation** | **Pydantic v2** | High-speed data model serialization, strict request sanitization, and input boundary validation. |
-| **Data Persistence** | **SQLite 3 (WAL Mode)** | Local-first relational database operating in Write-Ahead Logging (`PRAGMA journal_mode=WAL`) mode for high-concurrency ACID transactions, persisting user records, quiz sessions, and question banks. |
-| **Frontend Rendering** | **Jinja2 (SSR)** | Server-Side Rendered templates delivering instant initial page paints and zero-FOUC (Flash of Unstyled Content) layouts. |
-| **Client Reactivity** | **Alpine.js** | Lightweight declarative reactivity engine managing client-side interactive state, dropdowns, keyboard events, and modal drawers. |
-| **Styling & Design System** | **Tailwind CSS & Vanilla CSS** | Bespoke high-contrast editorial design tokens with dark/light ambient adaptation, responsive layouts, and tactile touch states. |
-| **Mobile & PWA Engine** | **Service Worker & Web Manifest** | Root-scoped Service Worker (`sw.js`) caching static UI assets (CSS, JS, fonts) for sub-second page transitions and standalone home-screen mobile display. |
-| **Security & Auth Layer** | **`itsdangerous` + `bcrypt`** | Cryptographically signed, tamper-proof session cookies (`URLSafeTimedSerializer`) for stateless request authentication paired with salted password/PIN hashing. |
-| **Quality & Test Harness** | **Pytest & Playwright** | Comprehensive automated test suite spanning unit test cases, API integration tests, and headless browser UI validations. |
+| **Backend Framework** | **FastAPI** (Python 3.12) | Asynchronous REST routing, modular endpoints and high-speed JSON serialization. |
+| **ASGI Server** | **Uvicorn** | High-concurrency asynchronous server gateway interface. |
+| **Reverse Proxy** | **Caddy** | Automatic HTTPS, HTTP/2 & HTTP/3 termination, Gzip/Zstandard compression and static asset caching. |
+| **Data Persistence** | **SQLite 3 (WAL Mode)** | Local-first relational database with Write-Ahead Logging (`PRAGMA journal_mode=WAL`) for concurrent reads and writes without lock contention. |
+| **Session State** | **UUID Resumable Sessions** | Server-persisted session matrices recording randomized questions, answered keys and timers. |
+| **Frontend Templates** | **Jinja2 (SSR)** | Server-side rendered templates for instant initial page paints with zero layout shift. |
+| **Client Reactivity** | **Alpine.js** | Minimalist declarative reactivity handling interactive modals, dropdowns, timer ticks and keyboard navigation. |
+| **Styling & Tokens** | **Tailwind CSS & Vanilla CSS** | Custom responsive design tokens with native dark/light theme switching and mobile touch drawers. |
+| **Mobile & PWA Engine** | **Service Worker & Manifest** | Standalone installable PWA with offline UI asset caching and responsive home-screen launch. |
+| **Security & Auth** | **`itsdangerous` + `bcrypt`** | Cryptographically signed, tamper-proof session cookies for stateless authentication paired with salted PIN hashing. |
+| **Document Processing** | **PyMuPDF (`fitz`)** | High-speed PDF text parsing and textbook search indexing for automated citation generation. |
+| **Testing Harness** | **Pytest & Playwright** | Comprehensive automated test coverage spanning unit tests, API routes and browser UI simulations. |
+
+---
+
+## 🔍 Question Auditing, Book References & Explanation Pipeline
+
+Omni-Quiz incorporates specialized offline automation scripts to ensure that all question banks meet strict quality standards, contain zero OCR scan errors and provide authoritative textbook citations:
+
+### 1. Unified Question Bank Audit Suite (`omni_audit_suite.py`)
+A comprehensive database quality assurance tool that scans and automatically cleans question records:
+* **Structural & Schema Integrity**: Ensures question stems meet minimum length requirements ($\ge 15$ characters), all 4 answer options (A, B, C, D) are populated and correct answer keys are valid.
+* **Automated OCR Ligature & Typo Repair**: Fixes scanning errors from digitized source books (e.g. `difÏcult` $\to$ `difficult`, `ofÏce` $\to$ `office`, `secirity` $\to$ `security`, `govemance` $\to$ `governance`).
+* **Typography Standardization**: Cleans non-standard control characters (`\xa0`, `\u200b`), fixes smart quotes and standardizes punctuation spacing (e.g. `risk.The` $\to$ `risk. The`).
+* **Cybersecurity & IT Terminology Whitelist**: Audits words against a comprehensive technical dictionary covering certifications, standards and metrics (ISACA, ISC2, NIST, COBIT, CIA triad, SIEM, SOC, RTO/RPO, BIA, etc.) to flag genuine spelling issues.
+* **Distractor Length Calibration**: Analyzes answer choice lengths to identify questions where the correct answer is noticeably longer or shorter than the distractors, preventing giveaway answers.
+
+### 2. Book Reference Search & Citation Indexer (`build_book_index.py`, `deep_enrich_quotes.py`)
+To ensure explanations are grounded in authoritative source literature, the platform uses a book indexing and citation pipeline:
+* **Textbook Full-Text Indexing**: Uses PyMuPDF to extract and index page-by-page text from official study guides (e.g., Mike Chapple *CC Study Guide*, Steven Bennett *CC All-in-One Exam Guide* and official ISACA review manuals).
+* **Automated Keyword & Concept Matching**: Analyzes the question stem and correct answer choice to search the textbook index for the exact relevant section.
+* **Substantive Quote Extraction**: Automatically pulls the defining paragraph and chapter reference from the textbook and embeds the exact quote and page number into the question's explanation field.
+
+### 3. Structured 4-Option Explanation Builder (`deep_educational_explanations.py`)
+Every question explanation follows a clean 3-part educational structure:
+1. **Core Concept & Scenario Rationale**: Explains directly why the correct answer solves the problem presented in the question stem.
+2. **Official Exam Guide Citation**: Cites the textbook title, chapter topic, page number and direct textbook quote.
+3. **Granular Distractor Analysis**: Explicitly details why each incorrect option (A, B, C or D) is wrong, explaining whether it applies to a different layer, an unrelated security concept or a different administrative role.
 
 ---
 
@@ -260,6 +311,14 @@ interface QuizQuestion {
   explanation: string;       // Comprehensive 4-option rationale breakdown
 }
 ```
+
+---
+
+## 🎯 Mission & Vision
+
+> **The Mission**: To provide a clean, fast and open platform for exam prep, allowing candidates to practice with realistic test conditions and high-quality study materials without artificial paywalls.
+> 
+> **The Vision**: To combine realistic exam timing, thorough answer explanations and smart review queues into a simple, high-impact study tool.
 
 ---
 
