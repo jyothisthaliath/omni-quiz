@@ -19,18 +19,18 @@
 
 **Omni-Quiz Engine** is an exam simulation and study platform designed to prepare candidates for computer-based tests, especially IT certification exams.
 
-Traditional study methods like static flashcards and notes are great for quick review, but they don't prepare you for the time limits, navigation and pressure of a real testing environment. Omni-Quiz bridges this gap by combining authentic exam screens, detailed answer breakdowns and speed tracking in one place.
+Traditional study tools like static flashcards don't prepare you for real testing pressure. Omni-Quiz bridges this gap with authentic exam screens, detailed answer breakdowns, and speed tracking in one place.
 
 ---
 
 ## 💎 Core Platform Features
 
 ### 1. Exam & Quiz Simulation
-* **Dual Quiz Modes**: Instant-feedback practice mode with step-by-step rationales and full timed mock exam simulation with unrevealed answers until submission.
-* **Realistic Exam Controls**: Flag-for-review question matrix, countdown timer and fast keyboard navigation (`A`, `B`, `C`, `D`, `F`, `Enter`).
-* **Resumable Exam State**: Quiz progress is automatically saved to the database, allowing candidates to pause and resume multi-hour tests anytime.
-* **Comprehensive 4-Option Rationales**: Explains why the correct choice is right and why each wrong choice is incorrect, complete with textbook page references.
-* **Weak-Spot Review & Spaced Repetition**: Automatically saves missed questions to a "Deep Dive" queue and resurfaces them across spaced intervals until mastered.
+* **Dual Quiz Modes**: Practice mode with instant feedback or full timed mock exams with answers hidden until submission.
+* **Realistic Controls**: Countdown timer, question grid and navigation with keyboard shortcuts.
+* **Resumable Exams**: Progress is automatically saved so you can pause and resume multi-hour tests anytime.
+* **Detailed Explanations**: Learn why correct answers work and why wrong choices fail, backed by textbook references.
+* **Smart Review Queue**: Missed questions are saved to a "Deep Dive" list and resurfaced until mastered. Flag questions for review during the test.
 
 ### 2. Performance & Pacing Analytics
 * **Per-Question Time Tracking**: Tracks exact seconds spent on each question to identify speed bottlenecks and pacing risks.
@@ -38,13 +38,13 @@ Traditional study methods like static flashcards and notes are great for quick r
 
 ### 3. Mobile & PWA Experience
 * **Installable App**: Works as a standalone Progressive Web App on phones and tablets with home-screen launch and offline asset caching.
-* **Touch-Friendly Design**: Responsive bottom-sheet review drawers, smooth tap controls and seamless dark/light theme switching.
+* **Mobile screen optimized**: Clean layouts with smooth tap controls and dark/light theme switching. 
 
 ### 4. Administration & Content Management
-* **In-Browser Question Studio**: Filter by course or topic, browse questions with next/previous controls and edit questions with live markdown preview.
-* **Safe Staging-to-Production Sync**: Make and test question edits in staging, then sync directly to production with automatic database backups.
-* **Bulk Import & Export**: One-click export of filtered question banks to standard CSV/JSON and upload ingestion with validation checks.
-* **Invite Code Access Control**: Generate custom invite codes with usage limits, expiration dates and live redemption audit logs.
+* **In-Browser Question Studio**: Browse and edit questions content with live preview.
+* **Safe Staging-to-Production Sync**: Test content updates in staging before pushing to production with automatic backups. 
+* **Bulk Import & Export**: Easily upload or export question banks using CSV and JSON files.
+* **Invite Code Access Control**: Generate custom invite codes with usage limits and expiration dates.
 
 ---
 
