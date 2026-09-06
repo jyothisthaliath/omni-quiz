@@ -9,12 +9,13 @@
 
 **A lightweight, realistic exam simulation platform built for professional certification practice.**
 
-[Overview](#-product-overview) • [Core Features](#-core-platform-features) • [Interface Showcase](#-platform-interface-showcase) • [System Architecture & Tech Stack](#-system-architecture--technology-stack) • [Question Auditing & Book References](#-question-auditing-book-references--explanation-pipeline) • [Data Contract & Samples](#-data-contract--sample-datasets) • [Mission & Vision](#-mission--vision)
+[Overview](#overview) • [Core Features](#features) • [Interface Showcase](#interface-showcase) • [System Architecture & Tech Stack](#architecture) • [Question Auditing & References](#question-auditing) • [Data Ingestion](#data-ingestion) • [Templates & Samples](#templates) • [Mission & Vision](#mission)
 
 </div>
 
 ---
 
+<a id="overview"></a>
 ## 🧭 Product Overview
 
 **Omni-Quiz Engine** is an exam simulation and study platform designed to prepare candidates for computer-based tests, especially IT certification exams.
@@ -23,6 +24,7 @@ Traditional study tools like static flashcards don't prepare you for real testin
 
 ---
 
+<a id="features"></a>
 ## 💎 Core Platform Features
 
 ### 1. Exam & Quiz Simulation
@@ -48,6 +50,7 @@ Traditional study tools like static flashcards don't prepare you for real testin
 
 ---
 
+<a id="interface-showcase"></a>
 ## 📸 Platform Interface Showcase
 
 ### 1. Realistic Exam Screen (Desktop)
@@ -115,6 +118,7 @@ Traditional study tools like static flashcards don't prepare you for real testin
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ System Architecture & Technology Stack
 
 ```mermaid
@@ -160,6 +164,7 @@ Omni-Quiz is built with a lightweight, high-performance tech stack designed for 
 
 ---
 
+<a id="question-auditing"></a>
 ## 🔍 Question Auditing, Book References & Explanation Pipeline
 
 Omni-Quiz incorporates specialized offline automation scripts to ensure that all question banks meet strict quality standards, contain zero OCR scan errors and provide authoritative textbook citations:
@@ -186,6 +191,7 @@ Every question explanation follows a clean 3-part educational structure:
 
 ---
 
+<a id="data-ingestion"></a>
 ## 📦 Data Ingestion Architecture
 
 Omni-Quiz Engine utilizes a standardized, modular data contract for curriculum and question bank ingestion. Subject matter experts and instructional designers can supply question datasets in either JSON or CSV format.
@@ -209,6 +215,7 @@ interface QuizQuestion {
 
 ---
 
+<a id="templates"></a>
 ## 📑 Templates & Sample Datasets
 
 Reference the standardized ingestion schemas and generic demonstration datasets included in this package:
@@ -220,6 +227,7 @@ Reference the standardized ingestion schemas and generic demonstration datasets 
 
 ---
 
+<a id="mission"></a>
 ## 🎯 Mission & Vision
 
 > **The Mission**: To provide a clean, fast and open platform for exam prep, allowing candidates to practice with realistic test conditions and high-quality study materials without artificial paywalls.
