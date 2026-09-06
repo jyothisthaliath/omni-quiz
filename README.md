@@ -195,51 +195,16 @@ Omni-Quiz includes a complete suite of administrative and operational tools for 
 ### Component Architecture
 
 ```mermaid
-graph TD
-    subgraph Client["1. Client Layer"]
-        Browser["Desktop Exam Browser\n(Jinja2 SSR + Alpine.js)"]
-        MobilePWA["Mobile PWA\n(Touch UI + Service Worker)"]
+flowchart TB
+    subgraph App["Live Web Application"]
+        direction LR
+        Client["Browser / Mobile PWA\n(Alpine.js + SSR)"] --> Proxy["Caddy Proxy\n(HTTPS / Static Assets)"] --> Server["FastAPI Backend\n(Quiz Engine & Admin APIs)"] --> DB[("SQLite Database\n(WAL Mode)")]
     end
 
-    subgraph EdgeServer["2. Web Gateway & Auth"]
-        Proxy["Caddy Reverse Proxy\n(HTTPS, Compression & Static Caching)"]
-        ASGI["Uvicorn ASGI Server\n(Python 3.12 Asynchronous Runtime)"]
-        Auth["Signed Cookie Auth\n(itsdangerous + bcrypt Hashing)"]
+    subgraph Tools["Offline Question & Audit Tools"]
+        direction LR
+        Sources["Study Guides & PDFs\n(Reference Literature)"] --> Indexer["Book Indexer\n(PyMuPDF Quote Search)"] --> Auditor["Omni Audit Suite\n(QA & Typo Auto-Fix)"] --> DB
     end
-
-    subgraph AppCore["3. FastAPI Core Services"]
-        QuizEngine["Exam Simulation Engine\n(Practice & Mock Modes, Timers)"]
-        SRSEngine["Deep Dive Queue\n(Spaced Repetition & Weak-Spot Remediation)"]
-        Telemetry["Pacing & Analytics Engine\n(Dwell-Time & Domain Readiness)"]
-        AdminStudio["Admin Studio APIs\n(Question Editor, CSV/JSON Sync, Invites)"]
-        Announce["Announcement Dispatcher\n(Sticky Alerts & Cross-Device Read Sync)"]
-    end
-
-    subgraph DataLayer["4. Persistence & Storage"]
-        DB[("SQLite 3 Database\n(WAL Mode, High-Concurrency ACID)")]
-        Sessions[("QuizSessions Table\n(UUID Resumable Exam State)")]
-        Backups[("Automated Backups\n(Timestamped WAL Checkpoints)")]
-    end
-
-    subgraph Tooling["5. Auditing & Reference Tools"]
-        AuditSuite["Omni Audit Suite\n(OCR / Typo / Length Balance QA)"]
-        BookIndexer["PyMuPDF Book Search\n(Textbook Page & Quote Indexer)"]
-        ETLExplanation["Explanation Generator\n(4-Option Rationale Synthesizer)"]
-    end
-
-    Browser --> Proxy
-    MobilePWA --> Proxy
-    Proxy --> ASGI
-    ASGI --> Auth
-    Auth --> AppCore
-    QuizEngine --> DB
-    SRSEngine --> DB
-    Telemetry --> DB
-    AdminStudio --> DB
-    Announce --> DB
-    DB --- Sessions
-    DB --> Backups
-    Tooling -.->|Audits, Enriches & Syncs| DB
 ```
 
 ---
