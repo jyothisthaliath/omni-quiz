@@ -82,23 +82,23 @@ Traditional study methods like static flashcards and notes are great for quick r
 
 ## 🛠️ Admin & Management Tools
 
-Omni-Quiz includes a complete suite of administrative and operational tools for managing curriculum, users and deployments without manual database hacking:
+Omni-Quiz includes a complete suite of administrative tools for managing curriculum, users and deployments without touching raw database files:
 
-### 1. Interactive Question Bank Studio (`/admin/questions`)
+### 1. Interactive Question Bank Studio
 * **Multi-Course & Domain Filters**: Instantly filter questions by course track and knowledge domain.
 * **Single-Record Live Editor**: Rapid next/previous navigation through questions with live in-browser editing of question stems, choices (A, B, C, D), correct answer keys and full explanations.
 * **Live Markdown Preview**: Real-time rendering of formatted option breakdowns, lists and citations as you type.
 * **Bulk CSV & JSON Import/Export**: One-click export of filtered or full question banks to standard CSV/JSON and upload ingestion with validation checks.
 
-### 2. Safe Dev-to-Prod Synchronization
-* **Isolated Staging Workflow**: All question edits and structural fixes are made safely in the Development environment (`APP_ENV=development`).
-* **One-Click Production Sync**: The admin studio includes a guarded `/sync-prod` pipeline that automatically:
-  1. Creates a timestamped SQLite WAL backup before any changes are written.
-  2. Runs a dry-run schema validation check.
-  3. Copies audited question records cleanly into the production database.
+### 2. Safe Staging-to-Production Sync
+* **Isolated Staging Workflow**: Test and preview all question edits safely in a staging environment before publishing to live users.
+* **One-Click Production Sync**: A protected publishing pipeline that automatically:
+  1. Creates a timestamped SQLite database backup before any changes are written.
+  2. Runs a schema validation check.
+  3. Copies audited question records cleanly into the live production database.
   4. Triggers a zero-downtime service reload without interrupting active candidate exam sessions.
 
-### 3. Dynamic Invite Code & Access Manager (`/admin/invites`)
+### 3. Dynamic Invite Code & Access Manager
 * **Custom Code Generation**: Generate clean alphanumeric invite codes with custom usage limits (single-use or multi-user).
 * **Expiration Timers**: Set time-based validity windows (e.g., 7-day or 30-day access passes).
 * **Instant Activation Control**: Toggle codes active/inactive on the fly to grant or revoke access instantly.
@@ -108,10 +108,10 @@ Omni-Quiz includes a complete suite of administrative and operational tools for 
 * **Global & Course Banners**: Publish sticky announcements or dismissible alerts directly to candidate portals.
 * **Read State Sync**: User dismissals are synced across devices via database tracking so candidates never see duplicate alerts.
 
-### 5. DevOps Automation & Health Diagnostics
-* **Automated WAL Backups**: Scheduled SQLite backups with WAL checkpoints and retention rotation.
+### 5. Automated Backups & Health Diagnostics
+* **Automated Database Backups**: Scheduled SQLite backups with WAL checkpoints and retention rotation.
 * **Point-in-Time Restore**: Automated verification and rollback to previous database snapshots.
-* **System Health Inspector**: Quick health probes checking Caddy reverse proxy, Dev server and Prod server status.
+* **System Health Inspector**: Quick health probes checking reverse proxy, dev server and production server status.
 
 ---
 
