@@ -21,14 +21,6 @@
 
 Traditional study methods like static flashcards and notes are great for quick review, but they don't prepare you for the time limits, navigation and pressure of a real testing environment. Omni-Quiz bridges this gap by combining authentic exam screens, detailed answer breakdowns and speed tracking in one place.
 
-### What You Can Do
-* **Practice Like the Real Exam**: Take timed mock tests with question flags, review grids and quick keyboard shortcuts (`A`, `B`, `C`, `D`, `F`).
-* **Learn from Every Answer**: Read clear explanations for why the right answer is correct and why every wrong choice is wrong, with textbook page references.
-* **Fix Your Weak Spots**: Automatically save missed questions to a review list that brings them back until you master them.
-* **Track Speed and Accuracy**: See how many seconds you spend on each question and check your score by topic.
-* **Study on Any Device**: Works seamlessly on phone, tablet or desktop with dark and light modes.
-* **Manage Questions and Users**: Edit questions in your browser, import/export CSV files and share custom invite codes.
-
 ---
 
 ## 📸 Platform Interface Showcase
