@@ -21,13 +21,13 @@
 
 Traditional study methods like static flashcards and notes are great for quick review, but they don't prepare you for the time limits, navigation and pressure of a real testing environment. Omni-Quiz bridges this gap by combining authentic exam screens, detailed answer breakdowns and speed tracking in one place.
 
-```mermaid
-flowchart LR
-    A[Curriculum Ingestion] --> B[Automated Quality Audit]
-    B --> C[Realistic Exam Simulator]
-    C --> D[Targeted Deep Dive Queue]
-    D --> E[Domain Analytics & Milestones]
-```
+### Key Highlights at a Glance
+* **Authentic Exam Simulator**: Practice and full mock exam modes with realistic countdown timers, question review grids, flag-for-review and full keyboard shortcuts (`A`, `B`, `C`, `D`, `F`, `Enter`).
+* **Detailed 4-Option Explanations**: Every question explains why the correct answer is right and why each wrong option is incorrect, complete with textbook page citations.
+* **Targeted Weak-Spot Queue**: Automatically routes missed questions into a "Deep Dive" list for focused spaced-repetition drills.
+* **Pacing & Readiness Telemetry**: Tracks time spent per question and domain-by-domain accuracy to identify bottlenecks and calculate exam readiness.
+* **Mobile PWA & Touch Controls**: Installable on phones and tablets with dark/light themes, touch-optimized drawers and offline UI caching.
+* **Admin Studio & DevOps Tools**: Web-based question editor with live markdown preview, safe Dev-to-Prod sync, invite code manager and automated database backups.
 
 ---
 
