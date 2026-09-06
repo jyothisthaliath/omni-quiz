@@ -109,9 +109,9 @@ Omni-Quiz includes a complete suite of administrative and operational tools for 
 * **Read State Sync**: User dismissals are synced across devices via database tracking so candidates never see duplicate alerts.
 
 ### 5. DevOps Automation & Health Diagnostics
-* **Automated WAL Backups (`backup.py`)**: Scheduled SQLite backups with WAL checkpoints and retention rotation.
-* **Point-in-Time Restore (`restore.py`)**: Automated verification and rollback to previous database snapshots.
-* **System Health Inspector (`verify_services.py`)**: Quick health probes checking Caddy reverse proxy, Dev server and Prod server status.
+* **Automated WAL Backups**: Scheduled SQLite backups with WAL checkpoints and retention rotation.
+* **Point-in-Time Restore**: Automated verification and rollback to previous database snapshots.
+* **System Health Inspector**: Quick health probes checking Caddy reverse proxy, Dev server and Prod server status.
 
 ---
 
@@ -226,21 +226,21 @@ Omni-Quiz is built with a lightweight, high-performance tech stack designed for 
 
 Omni-Quiz incorporates specialized offline automation scripts to ensure that all question banks meet strict quality standards, contain zero OCR scan errors and provide authoritative textbook citations:
 
-### 1. Unified Question Bank Audit Suite (`omni_audit_suite.py`)
-A comprehensive database quality assurance tool that scans and automatically cleans question records:
+### 1. Automated Question Bank Quality Auditing
+A comprehensive database quality assurance process that scans and automatically cleans question records:
 * **Structural & Schema Integrity**: Ensures question stems meet minimum length requirements ($\ge 15$ characters), all 4 answer options (A, B, C, D) are populated and correct answer keys are valid.
 * **Automated OCR Ligature & Typo Repair**: Fixes scanning errors from digitized source books (e.g. `difÏcult` $\to$ `difficult`, `ofÏce` $\to$ `office`, `secirity` $\to$ `security`, `govemance` $\to$ `governance`).
 * **Typography Standardization**: Cleans non-standard control characters (`\xa0`, `\u200b`), fixes smart quotes and standardizes punctuation spacing (e.g. `risk.The` $\to$ `risk. The`).
 * **Cybersecurity & IT Terminology Whitelist**: Audits words against a comprehensive technical dictionary covering certifications, standards and metrics (ISACA, ISC2, NIST, COBIT, CIA triad, SIEM, SOC, RTO/RPO, BIA, etc.) to flag genuine spelling issues.
 * **Distractor Length Calibration**: Analyzes answer choice lengths to identify questions where the correct answer is noticeably longer or shorter than the distractors, preventing giveaway answers.
 
-### 2. Book Reference Search & Citation Indexer (`build_book_index.py`, `deep_enrich_quotes.py`)
+### 2. Textbook Reference Search & Citation Indexing
 To ensure explanations are grounded in authoritative source literature, the platform uses a book indexing and citation pipeline:
 * **Textbook Full-Text Indexing**: Uses PyMuPDF to extract and index page-by-page text from official study guides (e.g., Mike Chapple *CC Study Guide*, Steven Bennett *CC All-in-One Exam Guide* and official ISACA review manuals).
 * **Automated Keyword & Concept Matching**: Analyzes the question stem and correct answer choice to search the textbook index for the exact relevant section.
 * **Substantive Quote Extraction**: Automatically pulls the defining paragraph and chapter reference from the textbook and embeds the exact quote and page number into the question's explanation field.
 
-### 3. Structured 4-Option Explanation Builder (`deep_educational_explanations.py`)
+### 3. Structured 4-Option Explanation Pipeline
 Every question explanation follows a clean 3-part educational structure:
 1. **Core Concept & Scenario Rationale**: Explains directly why the correct answer solves the problem presented in the question stem.
 2. **Official Exam Guide Citation**: Cites the textbook title, chapter topic, page number and direct textbook quote.
