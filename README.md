@@ -9,7 +9,7 @@
 
 **A lightweight, realistic exam simulation platform built for professional certification practice.**
 
-[Overview](#-product-overview) • [Interface Showcase](#-platform-interface-showcase) • [Candidate Features](#-core-candidate-features) • [Admin & Management Tools](#-admin--management-tools) • [System Architecture & Tech Stack](#-system-architecture--technology-stack) • [Question Auditing & Book References](#-question-auditing-book-references--explanation-pipeline) • [Data Contract & Samples](#-data-contract--sample-datasets) • [Mission & Vision](#-mission--vision)
+[Overview](#-product-overview) • [Candidate Features](#-core-candidate-features) • [Admin & Management Tools](#-admin--management-tools) • [Interface Showcase](#-platform-interface-showcase) • [System Architecture & Tech Stack](#-system-architecture--technology-stack) • [Question Auditing & Book References](#-question-auditing-book-references--explanation-pipeline) • [Data Contract & Samples](#-data-contract--sample-datasets) • [Mission & Vision](#-mission--vision)
 
 </div>
 
@@ -20,73 +20,6 @@
 **Omni-Quiz Engine** is an exam simulation and study platform designed to prepare candidates for computer-based tests, especially IT certification exams.
 
 Traditional study methods like static flashcards and notes are great for quick review, but they don't prepare you for the time limits, navigation and pressure of a real testing environment. Omni-Quiz bridges this gap by combining authentic exam screens, detailed answer breakdowns and speed tracking in one place.
-
----
-
-## 📸 Platform Interface Showcase
-
-### 1. Realistic Exam Screen (Desktop)
-*Exam simulation with question navigation, timer, flag-for-review and instant answer rationales.*
-
-<div align="center">
-  <img src="./assets/03_cbt_quiz_desktop.png" alt="Realistic Exam Screen Desktop Interface" width="100%" />
-</div>
-
----
-
-### 2. Mobile Responsive & PWA Experience
-*Touch-optimized quiz interface with native dark and light theme support.*
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <strong>Dark Theme</strong><br/><br/>
-        <img src="./assets/05_mobile_quiz_dark.png" alt="Mobile Quiz Dark Theme" width="360" />
-      </td>
-      <td align="center" width="50%">
-        <strong>Light Theme</strong><br/><br/>
-        <img src="./assets/06_mobile_quiz_light.png" alt="Mobile Quiz Light Theme" width="360" />
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
-### 3. Multi-Course Catalog & Milestones
-*Course selection, progress tracking and achievement milestones.*
-
-<div align="center">
-  <img src="./assets/01_course_catalog.png" alt="Multi-Course Catalog and Milestones Hub" width="100%" />
-</div>
-
----
-
-### 4. Performance Dashboard & Analytics
-*Domain-by-domain accuracy breakdowns, readiness scores and attempt history.*
-
-<div align="center">
-  <img src="./assets/02_course_dashboard_metrics.png" alt="Course Hub and Domain Diagnostics Dashboard" width="100%" />
-</div>
-
----
-
-### 5. Deep Dive Review Queue
-*Saved questions list for focused review of complex concepts and incorrect answers.*
-
-<div align="center">
-  <img src="./assets/07_deep_dive_remediation.png" alt="Deep Dive Assessment Review Queue" width="100%" />
-</div>
-
----
-
-### 6. Quiz Summary & Pacing Metrics
-*End-of-quiz score summary, domain performance breakdown and time spent per question.*
-
-<div align="center">
-  <img src="./assets/04_quiz_summary_pacing.png" alt="Quiz Performance Summary and Pacing Telemetry" width="100%" />
-</div>
 
 ---
 
@@ -182,6 +115,73 @@ Omni-Quiz includes a complete suite of administrative and operational tools for 
 
 ---
 
+## 📸 Platform Interface Showcase
+
+### 1. Realistic Exam Screen (Desktop)
+*Exam simulation with question navigation, timer, flag-for-review and instant answer rationales.*
+
+<div align="center">
+  <img src="./assets/03_cbt_quiz_desktop.png" alt="Realistic Exam Screen Desktop Interface" width="100%" />
+</div>
+
+---
+
+### 2. Mobile Responsive & PWA Experience
+*Touch-optimized quiz interface with native dark and light theme support.*
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <strong>Dark Theme</strong><br/><br/>
+        <img src="./assets/05_mobile_quiz_dark.png" alt="Mobile Quiz Dark Theme" width="360" />
+      </td>
+      <td align="center" width="50%">
+        <strong>Light Theme</strong><br/><br/>
+        <img src="./assets/06_mobile_quiz_light.png" alt="Mobile Quiz Light Theme" width="360" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+### 3. Multi-Course Catalog & Milestones
+*Course selection, progress tracking and achievement milestones.*
+
+<div align="center">
+  <img src="./assets/01_course_catalog.png" alt="Multi-Course Catalog and Milestones Hub" width="100%" />
+</div>
+
+---
+
+### 4. Performance Dashboard & Analytics
+*Domain-by-domain accuracy breakdowns, readiness scores and attempt history.*
+
+<div align="center">
+  <img src="./assets/02_course_dashboard_metrics.png" alt="Course Hub and Domain Diagnostics Dashboard" width="100%" />
+</div>
+
+---
+
+### 5. Deep Dive Review Queue
+*Saved questions list for focused review of complex concepts and incorrect answers.*
+
+<div align="center">
+  <img src="./assets/07_deep_dive_remediation.png" alt="Deep Dive Assessment Review Queue" width="100%" />
+</div>
+
+---
+
+### 6. Quiz Summary & Pacing Metrics
+*End-of-quiz score summary, domain performance breakdown and time spent per question.*
+
+<div align="center">
+  <img src="./assets/04_quiz_summary_pacing.png" alt="Quiz Performance Summary and Pacing Telemetry" width="100%" />
+</div>
+
+---
+
 ## 🏗️ System Architecture & Technology Stack
 
 ### Component Architecture
@@ -271,14 +271,6 @@ interface QuizQuestion {
 
 ---
 
-## 🎯 Mission & Vision
-
-> **The Mission**: To provide a clean, fast and open platform for exam prep, allowing candidates to practice with realistic test conditions and high-quality study materials without artificial paywalls.
-> 
-> **The Vision**: To combine realistic exam timing, thorough answer explanations and smart review queues into a simple, high-impact study tool.
-
----
-
 ## 📑 Templates & Sample Datasets
 
 Reference the standardized ingestion schemas and generic demonstration datasets included in this package:
@@ -287,6 +279,14 @@ Reference the standardized ingestion schemas and generic demonstration datasets 
 * **CSV Header Template**: [`templates/question_schema.csv`](./templates/question_schema.csv)
 * **Generic Sample Questions (JSON)**: [`samples/sample_questions.json`](./samples/sample_questions.json)
 * **Generic Sample Questions (CSV)**: [`samples/sample_questions.csv`](./samples/sample_questions.csv)
+
+---
+
+## 🎯 Mission & Vision
+
+> **The Mission**: To provide a clean, fast and open platform for exam prep, allowing candidates to practice with realistic test conditions and high-quality study materials without artificial paywalls.
+> 
+> **The Vision**: To combine realistic exam timing, thorough answer explanations and smart review queues into a simple, high-impact study tool.
 
 ---
 
