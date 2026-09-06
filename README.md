@@ -186,15 +186,22 @@ Omni-Quiz includes a complete suite of administrative tools for managing curricu
 
 ```mermaid
 flowchart TB
-    subgraph App["Live Web Application"]
+    subgraph Dev["Development & Staging Environment"]
         direction LR
-        Client["Browser / Mobile PWA<br/>(Interactive UI)"] --> Proxy["Caddy Web Server<br/>(HTTPS & Static Assets)"] --> Server["FastAPI Backend<br/>(Quiz Engine & Admin)"] --> DB[("SQLite Database<br/>(Questions & Progress)")]
+        Admin["Admin Studio & Editor<br/>(Question Review)"] --> DevServer["Dev FastAPI Server<br/>(Testing & Validation)"] --> DevDB[("Dev Database<br/>(Draft Content)")]
     end
 
     subgraph Tools["Offline Question & Audit Tools"]
         direction LR
-        Sources["Study Guides & PDFs<br/>(Course Textbooks)"] --> Indexer["Book Search & Indexer<br/>(Citation Generator)"] --> Auditor["Question Quality Auditor<br/>(Typo & Format Cleaner)"] --> DB
+        Sources["Study Guides & Textbooks<br/>(PDF Sources)"] --> Indexer["Book Search & Indexer<br/>(Citation Generator)"] --> Auditor["Question Quality Auditor<br/>(Typo & Format Cleaner)"] --> DevDB
     end
+
+    subgraph Prod["Live Production Application"]
+        direction LR
+        Candidate["Candidate Browser / PWA<br/>(Exam Simulation)"] --> Proxy["Caddy Web Server<br/>(HTTPS & Static Assets)"] --> ProdServer["Prod FastAPI Backend<br/>(Live Exam Engine)"] --> ProdDB[("Production Database<br/>(Live Data & Users)")]
+    end
+
+    DevDB -.->|Safe One-Click Sync & Backup| ProdDB
 ```
 
 ---
