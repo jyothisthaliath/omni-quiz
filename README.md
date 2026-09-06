@@ -25,32 +25,33 @@ Traditional study methods like static flashcards and notes are great for quick r
 
 ## 💎 Core Platform Features
 
-### 1. Realistic Practice & Mock Exam Modes
+### 1. Practice & Timed Mock Exam Modes
 * **Practice Mode**: Immediate feedback after each question with locked choices and full rationales.
-* **Mock Exam Mode**: Full timed test simulation with unrevealed answers until submission, question review grids and an end-of-test performance debrief.
+* **Mock Exam Mode**: Timed test simulation with unrevealed answers until submission, question review grids and an end-of-test performance debrief.
 * **Exam Controls**: Flag-for-review navigation matrix, countdown timer and quick keyboard shortcuts (`A`, `B`, `C`, `D`, `F`, `Enter`).
 * **Resumable State**: Exam progress is automatically saved to the database, allowing candidates to pause and resume multi-hour tests anytime.
 
 ### 2. Comprehensive 4-Option Explanations
-* **Rationales for Every Choice**: Breaks down why the correct answer is accurate and explains the exact conceptual fallacy behind each wrong option.
+* **Rationales for Every Choice**: Breaks down why the correct answer is accurate and explains why each wrong option is incorrect.
 * **Textbook Citations**: Links rationales directly to course study guides and official reference materials with exact chapter and page numbers.
 
-### 3. Targeted Weak-Spot Training & Spaced Repetition
-* **Automatic Error Quarantine**: Missed questions are automatically isolated into a "Deep Dive" remediation queue.
+### 3. Weak-Spot Review & Spaced Repetition
+* **Automatic Error Quarantine**: Missed questions are automatically isolated into a "Deep Dive" review list.
 * **Smart Review Drills**: Flagged and missed concepts resurface across spaced study intervals until the candidate proves repeated mastery.
 
-### 4. Pacing Telemetry & Readiness Analytics
-* **Per-Question Time Tracking**: Tracks exact seconds spent per question to diagnose pacing bottlenecks and time-management risks.
+### 4. Pacing & Topic Accuracy Analytics
+* **Time Spent Per Question**: Tracks exact seconds spent per question to diagnose pacing bottlenecks and speed risks.
 * **Topic Accuracy & Readiness**: Real-time accuracy computed across individual knowledge domains to estimate true exam readiness.
 
-### 5. Interactive Question Bank Studio & Safe Publishing
-* **Live In-Browser Editor**: Filter by course or domain, traverse questions with next/previous controls and edit stems, choices and explanations with live markdown preview.
-* **Safe Staging-to-Production Sync**: Make and test question edits safely in a staging environment, then sync directly to production with automatic database backups and zero downtime.
-* **Bulk Import & Export**: One-click export of filtered questions to standard CSV/JSON and upload ingestion with validation checks.
+### 5. Mobile Experience & Dark Mode (PWA)
+* **Installable App**: Works as a standalone Progressive Web App on phones and tablets with home-screen launch and fast offline asset caching.
+* **Touch-Friendly Navigation**: Bottom-sheet review drawers, smooth tap controls and seamless dark/light theme switching.
 
-### 6. Mobile PWA & Access Management
-* **Installable Mobile PWA**: Standalone app experience on phones and tablets with dark and light themes, touch drawers and offline asset caching.
-* **Dynamic Invite Codes**: Provision custom alphanumeric access codes with usage caps, expiration timers and real-time redemption logs.
+### 6. Question Editor & Content Management
+* **In-Browser Question Studio**: Filter by course or domain, traverse questions with next/previous controls and edit questions with live markdown preview.
+* **Safe Staging-to-Production Sync**: Make and test question edits safely in staging, then sync directly to production with automatic database backups.
+* **Bulk Import & Export**: One-click export of filtered questions to CSV/JSON and upload ingestion with validation checks.
+* **Invite Code Manager**: Create custom invite codes with usage limits, expiration dates and redemption tracking.
 
 ---
 
