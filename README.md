@@ -184,18 +184,16 @@ Omni-Quiz includes a complete suite of administrative tools for managing curricu
 
 ## 🏗️ System Architecture & Technology Stack
 
-### Component Architecture
-
 ```mermaid
 flowchart TB
     subgraph App["Live Web Application"]
         direction LR
-        Client["Browser / Mobile PWA<br/>(Alpine.js + SSR)"] --> Proxy["Caddy Proxy<br/>(HTTPS / Static Assets)"] --> Server["FastAPI Backend<br/>(Quiz Engine & Admin APIs)"] --> DB[("SQLite Database<br/>(WAL Mode)")]
+        Client["Browser / Mobile PWA<br/>(Interactive UI)"] --> Proxy["Caddy Web Server<br/>(HTTPS & Static Assets)"] --> Server["FastAPI Backend<br/>(Quiz Engine & Admin)"] --> DB[("SQLite Database<br/>(Questions & Progress)")]
     end
 
     subgraph Tools["Offline Question & Audit Tools"]
         direction LR
-        Sources["Study Guides & PDFs<br/>(Reference Literature)"] --> Indexer["Book Indexer<br/>(PyMuPDF Quote Search)"] --> Auditor["Omni Audit Suite<br/>(QA & Typo Auto-Fix)"] --> DB
+        Sources["Study Guides & PDFs<br/>(Course Textbooks)"] --> Indexer["Book Search & Indexer<br/>(Citation Generator)"] --> Auditor["Question Quality Auditor<br/>(Typo & Format Cleaner)"] --> DB
     end
 ```
 
@@ -203,22 +201,22 @@ flowchart TB
 
 ### Technology Stack & Specifications
 
-Omni-Quiz is built with a lightweight, high-performance tech stack designed for sub-millisecond response times, zero build-step overhead and simple maintenance:
+Omni-Quiz is built with a lightweight, high-performance tech stack designed for fast response times and zero setup headaches:
 
 | Layer | Technology | Role & Key Features |
 | :--- | :--- | :--- |
-| **Backend Framework** | **FastAPI** (Python 3.12) | Asynchronous REST routing, modular endpoints and high-speed JSON serialization. |
-| **ASGI Server** | **Uvicorn** | High-concurrency asynchronous server gateway interface. |
-| **Reverse Proxy** | **Caddy** | Automatic HTTPS, HTTP/2 & HTTP/3 termination, Gzip/Zstandard compression and static asset caching. |
-| **Data Persistence** | **SQLite 3 (WAL Mode)** | Local-first relational database with Write-Ahead Logging (`PRAGMA journal_mode=WAL`) for concurrent reads and writes without lock contention. |
-| **Session State** | **UUID Resumable Sessions** | Server-persisted session matrices recording randomized questions, answered keys and timers. |
-| **Frontend Templates** | **Jinja2 (SSR)** | Server-side rendered templates for instant initial page paints with zero layout shift. |
-| **Client Reactivity** | **Alpine.js** | Minimalist declarative reactivity handling interactive modals, dropdowns, timer ticks and keyboard navigation. |
-| **Styling & Tokens** | **Tailwind CSS & Vanilla CSS** | Custom responsive design tokens with native dark/light theme switching and mobile touch drawers. |
-| **Mobile & PWA Engine** | **Service Worker & Manifest** | Standalone installable PWA with offline UI asset caching and responsive home-screen launch. |
-| **Security & Auth** | **`itsdangerous` + `bcrypt`** | Cryptographically signed, tamper-proof session cookies for stateless authentication paired with salted PIN hashing. |
-| **Document Processing** | **PyMuPDF (`fitz`)** | High-speed PDF text parsing and textbook search indexing for automated citation generation. |
-| **Testing Harness** | **Pytest & Playwright** | Comprehensive automated test coverage spanning unit tests, API routes and browser UI simulations. |
+| **Backend Framework** | **FastAPI** (Python 3.12) | High-speed API powering quiz simulation, scoring and admin management. |
+| **ASGI Server** | **Uvicorn** | Fast asynchronous web server. |
+| **Web Server / Proxy** | **Caddy** | Automatic HTTPS, modern HTTP/3 compression and static file caching. |
+| **Data Persistence** | **SQLite 3** | Lightweight database storing questions, exam sessions and candidate progress. |
+| **Session State** | **Resumable Sessions** | Saves question order, timers and answers so tests can be resumed anytime. |
+| **Frontend Templates** | **Jinja2 (SSR)** | Server-side rendered pages for instant loading. |
+| **Client Reactivity** | **Alpine.js** | Lightweight interactivity for modals, dropdowns, timers and keyboard shortcuts. |
+| **Styling & Design** | **Tailwind CSS & Vanilla CSS** | Clean design with dark/light themes and mobile touch controls. |
+| **Mobile App** | **Progressive Web App (PWA)** | Installable on phone or tablet with home-screen launch and offline asset caching. |
+| **Security & Auth** | **Signed Session Cookies** | Secure, tamper-proof session cookies and salted password protection. |
+| **PDF Processing** | **PyMuPDF (`fitz`)** | Fast textbook search and page indexing for automated citations. |
+| **Automated Testing** | **Pytest & Playwright** | Complete automated test suite covering backend logic and UI interactions. |
 
 ---
 
