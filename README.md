@@ -9,7 +9,7 @@
 
 **A lightweight, realistic exam simulation platform built for professional certification practice.**
 
-[Overview](#-product-overview) • [Candidate Features](#-core-candidate-features) • [Admin & Management Tools](#-admin--management-tools) • [Interface Showcase](#-platform-interface-showcase) • [System Architecture & Tech Stack](#-system-architecture--technology-stack) • [Question Auditing & Book References](#-question-auditing-book-references--explanation-pipeline) • [Data Contract & Samples](#-data-contract--sample-datasets) • [Mission & Vision](#-mission--vision)
+[Overview](#-product-overview) • [Core Features](#-core-platform-features) • [Interface Showcase](#-platform-interface-showcase) • [System Architecture & Tech Stack](#-system-architecture--technology-stack) • [Question Auditing & Book References](#-question-auditing-book-references--explanation-pipeline) • [Data Contract & Samples](#-data-contract--sample-datasets) • [Mission & Vision](#-mission--vision)
 
 </div>
 
@@ -23,95 +23,34 @@ Traditional study methods like static flashcards and notes are great for quick r
 
 ---
 
-## 💎 Core Candidate Features
+## 💎 Core Platform Features
 
-### 1. Practice & Mock Exam Modes
-* **Practice Mode**: Get immediate feedback after answering each question, with full explanations showing why the right answer is correct and why each wrong choice is incorrect.
-* **Mock Exam Mode**: Simulates the real test experience with timed countdowns, unrevealed answers until submission, full question review grids and an end-of-test performance breakdown.
+### 1. Realistic Practice & Mock Exam Modes
+* **Practice Mode**: Immediate feedback after each question with locked choices and full rationales.
+* **Mock Exam Mode**: Full timed test simulation with unrevealed answers until submission, question review grids and an end-of-test performance debrief.
+* **Exam Controls**: Flag-for-review navigation matrix, countdown timer and quick keyboard shortcuts (`A`, `B`, `C`, `D`, `F`, `Enter`).
+* **Resumable State**: Exam progress is automatically saved to the database, allowing candidates to pause and resume multi-hour tests anytime.
 
-### 2. Realistic Exam Screen & Controls
-* **Realistic Countdown Timer**: Matches the pacing and time constraints of official exams.
-* **Flag for Review**: Easily flag tricky questions, see an overview of answered vs. unanswered items and jump straight to flagged questions before submitting.
-* **Full Keyboard Shortcuts**: Rapid option selection (`A`, `B`, `C`, `D`), flagging (`F`) and advancing (`Enter` / `Space`) for fast keyboard-only study sessions.
-* **Clean, Focused Design**: High-contrast, distraction-free screen calibrated for extended multi-hour study sessions without eye strain.
+### 2. Comprehensive 4-Option Explanations
+* **Rationales for Every Choice**: Breaks down why the correct answer is accurate and explains the exact conceptual fallacy behind each wrong option.
+* **Textbook Citations**: Links rationales directly to course study guides and official reference materials with exact chapter and page numbers.
 
-### 3. Resumable Quiz Sessions
-* **Persistent Session State**: Active quiz progress is saved automatically to the database, recording your question order, elapsed time and answers.
-* **Interruption Recovery**: Multi-hour mock exams can be paused, closed and resumed across browser refreshes, tab closures or device switches without losing progress.
+### 3. Targeted Weak-Spot Training & Spaced Repetition
+* **Automatic Error Quarantine**: Missed questions are automatically isolated into a "Deep Dive" remediation queue.
+* **Smart Review Drills**: Flagged and missed concepts resurface across spaced study intervals until the candidate proves repeated mastery.
 
-### 4. Pacing & Accuracy Metrics
-* **Time Spent Per Question**: Tracks exactly how many seconds you spend on each question to highlight where you get stuck.
-* **Domain Breakdown**: Calculates your accuracy across individual exam topics and domains in real time.
-* **Readiness Score**: Estimates your exam readiness based on recent attempts, question difficulty and domain coverage.
+### 4. Pacing Telemetry & Readiness Analytics
+* **Per-Question Time Tracking**: Tracks exact seconds spent per question to diagnose pacing bottlenecks and time-management risks.
+* **Topic Accuracy & Readiness**: Real-time accuracy computed across individual knowledge domains to estimate true exam readiness.
 
-### 5. Targeted Weak-Spot Training & Spaced Repetition
-* **Automatic Error Quarantine**: Incorrect answers are automatically saved to your "Deep Dive" review list.
-* **Smart Spaced Repetition**: Missed questions reappear across spaced study intervals until you answer them correctly multiple times.
-* **Custom Practice Sets**: Generate quick drills focused exclusively on your weakest topics.
+### 5. Interactive Question Bank Studio & Safe Publishing
+* **Live In-Browser Editor**: Filter by course or domain, traverse questions with next/previous controls and edit stems, choices and explanations with live markdown preview.
+* **Safe Staging-to-Production Sync**: Make and test question edits safely in a staging environment, then sync directly to production with automatic database backups and zero downtime.
+* **Bulk Import & Export**: One-click export of filtered questions to standard CSV/JSON and upload ingestion with validation checks.
 
-### 6. Achievement Badges & Milestones
-* **Mastery Milestones**: Earn badges (e.g., *Sharpshooter*, *Clean Sweep*, *Marathoner*, *Explorer*) as you complete quizzes and improve accuracy.
-* **Interactive Trophy Carousel**: Smooth swipeable badge showcase with celebration animations and progress indicators.
-
-### 7. Multi-Course Support
-* **Add New Courses Instantly**: Any new exam, subject or question bank can be loaded into the platform without database code changes.
-* **Topic Taxonomy**: Group questions by official domains and subtopics for custom practice sessions.
-
-### 8. Clear 4-Option Explanations
-* **Explanations for Every Choice**: Every question explains not only why the correct answer is right, but also why each wrong option doesn't fit the scenario.
-* **Direct Textbook Citations**: Explanations link directly to official study guides with exact chapter and page references.
-
-### 9. Mobile & PWA Support
-* **Installable App (PWA)**: Install Omni-Quiz as a standalone app on your phone or tablet with home-screen launch and fast offline asset caching.
-* **Touch-Friendly Controls**: Responsive bottom-sheet question drawers and tap-friendly buttons.
-* **Dark & Light Themes**: Easy one-click theme switching for comfortable reading day or night.
-
-### 10. Simple, Secure Authentication
-* **Tamper-Proof Session Cookies**: Fast, secure login using cryptographically signed cookies (`itsdangerous` + `bcrypt`).
-* **Isolated User Data**: Each candidate has private access to their own attempt histories, speed metrics and review lists.
-
-### 11. Broadcast Announcement Banners
-* **Banner Alerts**: Admins can broadcast sticky updates or study tips directly to the candidate portal.
-* **Cross-Device Dismissal**: When you dismiss a banner on your phone, it stays dismissed on your desktop.
-
-### 12. Safe Data Protection
-* **Anti-Scraping Protection**: Questions and answer keys are served dynamically per question, preventing automated client-side data dumps.
-* **Private & Self-Contained**: 100% self-hosted with zero third-party tracking scripts, analytics cookies or external surveillance probes.
-
----
-
-## 🛠️ Admin & Management Tools
-
-Omni-Quiz includes a complete suite of administrative tools for managing curriculum, users and deployments without touching raw database files:
-
-### 1. Interactive Question Bank Studio
-* **Multi-Course & Domain Filters**: Instantly filter questions by course track and knowledge domain.
-* **Single-Record Live Editor**: Rapid next/previous navigation through questions with live in-browser editing of question stems, choices (A, B, C, D), correct answer keys and full explanations.
-* **Live Markdown Preview**: Real-time rendering of formatted option breakdowns, lists and citations as you type.
-* **Bulk CSV & JSON Import/Export**: One-click export of filtered or full question banks to standard CSV/JSON and upload ingestion with validation checks.
-
-### 2. Safe Staging-to-Production Sync
-* **Isolated Staging Workflow**: Test and preview all question edits safely in a staging environment before publishing to live users.
-* **One-Click Production Sync**: A protected publishing pipeline that automatically:
-  1. Creates a timestamped SQLite database backup before any changes are written.
-  2. Runs a schema validation check.
-  3. Copies audited question records cleanly into the live production database.
-  4. Triggers a zero-downtime service reload without interrupting active candidate exam sessions.
-
-### 3. Dynamic Invite Code & Access Manager
-* **Custom Code Generation**: Generate clean alphanumeric invite codes with custom usage limits (single-use or multi-user).
-* **Expiration Timers**: Set time-based validity windows (e.g., 7-day or 30-day access passes).
-* **Instant Activation Control**: Toggle codes active/inactive on the fly to grant or revoke access instantly.
-* **Redemption Audit Trail**: View real-time redemption logs showing which candidates used which invite code and when.
-
-### 4. Broadcast Announcements & Alert Dispatcher
-* **Global & Course Banners**: Publish sticky announcements or dismissible alerts directly to candidate portals.
-* **Read State Sync**: User dismissals are synced across devices via database tracking so candidates never see duplicate alerts.
-
-### 5. Automated Backups & Health Diagnostics
-* **Automated Database Backups**: Scheduled SQLite backups with WAL checkpoints and retention rotation.
-* **Point-in-Time Restore**: Automated verification and rollback to previous database snapshots.
-* **System Health Inspector**: Quick health probes checking reverse proxy, dev server and production server status.
+### 6. Mobile PWA & Access Management
+* **Installable Mobile PWA**: Standalone app experience on phones and tablets with dark and light themes, touch drawers and offline asset caching.
+* **Dynamic Invite Codes**: Provision custom alphanumeric access codes with usage caps, expiration timers and real-time redemption logs.
 
 ---
 
